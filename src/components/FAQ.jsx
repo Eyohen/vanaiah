@@ -33,13 +33,13 @@ const FAQ = () => {
     {
       id: 5,
       question: "Is the app suitable for small businesses",
-      answer: "Definitely! The system is designed with small businesses in mind. It’s affordable, user-friendly, and helps save time by automating repetitive tasks.",
+      answer: "Definitely! The system is designed with small businesses in mind. It's affordable, user-friendly, and helps save time by automating repetitive tasks.",
       isOpen: false
     },
     {
       id: 6,
       question: "What makes this app different from others",
-      answer: "Our system uses LLMs as it’s core function for inventory management. Making it different from regular system. Geninv does the heavy lifting so you don’t have to.",
+      answer: "Our system uses LLMs as it's core function for inventory management. Making it different from regular system. Geninv does the heavy lifting so you don't have to.",
       isOpen: false
     },
     
@@ -52,7 +52,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-white px-4 sm:px-6 lg:px-8 xl:px-[300px] w-[1000px]">
+    <div className="bg-white px-4 sm:px-6 lg:px-8 xl:px-[300px] w-[350px]">
 
     
       <div className="space-y-4">

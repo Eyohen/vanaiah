@@ -19,7 +19,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <div className='px-96'>
+      <div className='px-4 md:px-96'>
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 md:px-0">
@@ -90,7 +90,7 @@ await client.send({
       
       {/* About us Section */}
       <section className="py-12 ">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 items-center">
 
           <div>
           <p className='font-bold text-4xl text-[#2B47FF]'>About us</p>
@@ -104,8 +104,8 @@ await client.send({
 
            {/* Services Section */}
            <section className="py-16 flex justify-between items-center">
-            <div className='flex justify-center gap-x-64 items-center'>
-        <div className="grid grid-cols-2 gap-9">
+            <div className='flex flex-col md:flex-row justify-center gap-x-64 items-center'>
+        <div className="grid md:grid-cols-2 gap-9">
 
           <div className='font-bold text-4xl bg-[#7487FF] w-[330px] px-4 py-6 shadow-2xl'>
             <img src={kite} />
@@ -153,7 +153,7 @@ await client.send({
       {/* Why Choose us Section */}
       <section className="py-16 ">
         <p className='py-12 text-center font-bold text-4xl'>Why Choose Us</p>
-        <div className="grid grid-cols-2 gap-24">
+        <div className="grid md:grid-cols-2 gap-24">
 
 
   <div className='px-6 py-12 rounded-2xl shadow-2xl'>
@@ -224,7 +224,7 @@ await client.send({
       {/* Frequently asked questions Section */}
       <section className="py-12 ">
       <p className='py-12 text-center text-[#2B47FF] font-bold text-4xl'>Frequently Asked Questions</p>
-        <div className="flex flex-col md:flex-row ">
+        <div className="flex flex-col md:flex-row space-y-9 md:space-y-0">
 
           <div>
           <p className='font-bold text-4xl'>Need Help? We're Here for You! </p>
