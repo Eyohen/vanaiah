@@ -19,10 +19,10 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <div className='px-4 md:px-96'>
+      <div className='px-4 md:px-64'>
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 md:px-0">
+      <section className="pt-32">
         <div className="">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-10 md:mb-0">

@@ -52,7 +52,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-white px-4 sm:px-6 lg:px-8 xl:px-[300px] w-[350px]">
+    <div className="bg-white px-4 sm:px-6 lg:px-8 xl:px-[300px] w-[350px] md:w-[1000px]">
 
     
       <div className="space-y-4">
