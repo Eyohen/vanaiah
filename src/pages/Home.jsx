@@ -14,6 +14,8 @@ import chart from '../assets/chart.png'
 import support from '../assets/support.png'
 import shield from '../assets/shield.png'
 import FAQ from '../components/FAQ';
+import footerlogo from '../assets/footerlogo.png'
+import Footer from '../components/Footer';
 
 function Home() {
   return (
@@ -49,41 +51,36 @@ function Home() {
               </div>
         
             </div>
-            <div className="md:w-[600px]">
-              <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 shadow-lg">
-                <div className="flex items-center mb-4">
-                  <div className="flex space-x-2">
-                    <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-                    <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-                    <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-                  </div>
-                  <div className="ml-4 text-xs text-gray-500">api-request.js</div>
-                </div>
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-md text-sm overflow-x-auto">
-                  <code>
-{`import { PaperSignal } from '@papersignal/sdk';
+          
 
-// Initialize the client
-const client = new PaperSignal('YOUR_API_KEY');
+            <div className="w-full max-w-md mx-auto">
+  <div className="bg-[#000941] border border-gray-100 rounded-2xl p-4 sm:p-6 md:p-9 shadow-xl">
+    
+    <div className="grid grid-cols-2 gap-x-4 sm:gap-x-6 md:gap-x-9 gap-y-8 sm:gap-y-12 md:gap-y-16">
+      <button className="bg-gradient-to-r from-[#FF6A2B] to-[#99401A] rounded-2xl text-white py-2 text-sm sm:text-base">Borrow</button>
+      <button className="bg-gradient-to-r from-[#0056D2] to-[#003B90] rounded-2xl text-white py-2 text-sm sm:text-base">Invest</button>
+      
+      <div>
+        <p className="text-white text-sm sm:text-base mb-1">Amount</p>
+        <button className="bg-white rounded-lg py-2 px-4 w-full text-sm sm:text-base">N100,000</button>
+      </div>
+      
+      <div>
+        <p className="text-white text-sm sm:text-base mb-1">Number of months</p>
+        <div className="bg-white rounded-lg py-2 px-4 w-full text-sm sm:text-base">5</div>
+      </div>
+    </div>
+    
+    <div className="pt-8 md:pt-12 text-center">
+      <p className="text-white text-sm sm:text-base mb-1">Monthly Repayment</p>
+      <button className="border border-white rounded-lg text-white py-2 px-4 w-full max-w-xs text-sm sm:text-base">N500,000</button>
+    </div>
+    
+  </div>
+</div>
 
-// Send a simple email
-await client.send({
-  from: 'notifications@yourapp.com',
-  to: 'user@example.com',
-  subject: 'Welcome to YourApp!',
-  html: '<h1>Welcome!</h1><p>Thanks for signing up.</p>',
-  
-  // Optional tracking
-  track: {
-    opens: true,
-    clicks: true,
-    unsubscribe: true
-  }
-});`}
-                  </code>
-                </pre>
-              </div>
-            </div>
+
+
           </div>
         </div>
       </section>
@@ -243,68 +240,7 @@ await client.send({
       </div>
       
       {/* Footer */}
-      <footer className="py-12 bg-white">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="flex items-center mb-6">
-                <FiMail className="text-black text-2xl mr-2" />
-                <span className="font-bold text-xl text-black">PaperSignal</span>
-              </div>
-              <p className="text-gray-600 mb-6">
-                The email API for modern developers
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-500 hover:text-black transition-colors">
-                  <BsTwitter className="text-xl" />
-                </a>
-                <a href="#" className="text-gray-500 hover:text-black transition-colors">
-                  <BsGithub className="text-xl" />
-                </a>
-                <a href="#" className="text-gray-500 hover:text-black transition-colors">
-                  <BsLinkedin className="text-xl" />
-                </a>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-black mb-4">Product</h4>
-              <ul className="space-y-3">
-                <li><a href="#features" className="text-gray-600 hover:text-black transition-colors">Features</a></li>
-                <li><a href="#pricing" className="text-gray-600 hover:text-black transition-colors">Pricing</a></li>
-                <li><a href="#documentation" className="text-gray-600 hover:text-black transition-colors">Documentation</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Status</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-black mb-4">Company</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">About</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Careers</a></li>
-                <li><a href="#contact" className="text-gray-600 hover:text-black transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-black mb-4">Legal</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Security</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">GDPR</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-100 pt-8">
-            <p className="text-gray-500 text-center">
-              &copy; {new Date().getFullYear()} PaperSignal. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+    <Footer />
     </div>
   );
 }

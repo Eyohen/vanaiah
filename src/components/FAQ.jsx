@@ -8,40 +8,35 @@ const FAQ = () => {
   const [faqItems, setFaqItems] = useState([
     {
       id: 1,
-      question: "How does the AI-powered inventory system work?",
-      answer: "Our system uses advanced natural language processing (NLP) to simplify inventory management. You can type instructions like 'Add 50 units of blue T-shirts' or 'Show me a report of all items sold this month,' and the LLM will execute these tasks seamlessly.",
+      question: "What types of loans does VANAIAH offer?",
+      answer: "You can apply for a loan by visiting our website or contacting our customer service team. The application process is quick and straightforward, requiring basic personal and financial information.",
       isOpen: false
     },
     {
       id: 2,
-      question: "Is there a free trial available",
+      question: "What documents do I need to provide?",
       answer: "Yes! You can start with our free plan, which offers core features to help you manage your inventory for 14 days only.",
       isOpen: false
     },
     {
       id: 3,
-      question: "What happens if i exceed the free plan's user limit",
+      question: "How long does it take to receive my funds?",
       answer: "After our 14 days free plan, you will be required to pay our subscription fee (monthly) which enables you enjoy our premium features for advanced analytics and collaborative features.",
       isOpen: false
     },
     {
       id: 4,
-      question: "How do you protect my data",
+      question: "Are there any hidden fees?",
       answer: "We take data security seriously. Your information is encrypted, and we adhere to industry-standard practices to ensure your data remains private and protected.",
       isOpen: false
     },
     {
       id: 5,
-      question: "Is the app suitable for small businesses",
-      answer: "Definitely! The system is designed with small businesses in mind. It's affordable, user-friendly, and helps save time by automating repetitive tasks.",
+      question: "Are there any hidden fees?",
+      answer: "Definitely! The system is designed with small businesses in mind. It’s affordable, user-friendly, and helps save time by automating repetitive tasks.",
       isOpen: false
     },
-    {
-      id: 6,
-      question: "What makes this app different from others",
-      answer: "Our system uses LLMs as it's core function for inventory management. Making it different from regular system. Geninv does the heavy lifting so you don't have to.",
-      isOpen: false
-    },
+
     
   ]);
 
