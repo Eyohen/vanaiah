@@ -3,6 +3,8 @@ import { TbCircleMinus, TbCirclePlus } from "react-icons/tb";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Navbar from "../components/Navbar";
 import unanswered from '../assets/unanswered.png'
+import Footer from '../components/Footer';
+
 
 const FAQ = () => {
   // Use an array of objects for FAQ items
@@ -56,7 +58,7 @@ const FAQ = () => {
 
       <p className='text-center text-xl text-gray-500 mt-8 mb-8'>More than 100+ trusted customers</p>
 
-      <div className="flex justify-center gap-x-12">
+      <div className="flex flex-col md:flex-row justify-center gap-y-4 md:gap-y-0 gap-x-12">
         <div>
         <button className="bg-[#2B47FF] text-white px-4 py-2 rounded-md">About Us</button>
       </div>
@@ -104,6 +106,7 @@ const FAQ = () => {
 <div className="flex justify-center mt-12"><img src={unanswered}/></div>
 
 
+<Footer/>
     </div>
   );
 };

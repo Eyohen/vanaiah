@@ -5,6 +5,7 @@ import { FiMail, FiMapPin, FiPhone, FiSend, FiMessageSquare } from 'react-icons/
 import { BsTwitter, BsGithub, BsLinkedin } from 'react-icons/bs';
 import contacthero from '../assets/contacthero.png'
 import rafiki from '../assets/rafiki.png'
+import Footer from '../components/Footer';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -131,68 +132,7 @@ const Contact = () => {
    
       
       {/* Footer */}
-      <footer className="py-12 bg-white border-t border-gray-100">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="flex items-center mb-6">
-                <FiMail className="text-black text-2xl mr-2" />
-                <span className="font-bold text-xl text-black">PaperSignal</span>
-              </div>
-              <p className="text-gray-600 mb-6">
-                The email API for modern developers
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-500 hover:text-black transition-colors">
-                  <BsTwitter className="text-xl" />
-                </a>
-                <a href="#" className="text-gray-500 hover:text-black transition-colors">
-                  <BsGithub className="text-xl" />
-                </a>
-                <a href="#" className="text-gray-500 hover:text-black transition-colors">
-                  <BsLinkedin className="text-xl" />
-                </a>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-black mb-4">Product</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Features</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Pricing</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Documentation</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Status</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-black mb-4">Company</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">About</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Careers</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-black mb-4">Legal</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Security</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">GDPR</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-100 pt-8">
-            <p className="text-gray-500 text-center">
-              &copy; {new Date().getFullYear()} PaperSignal. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+    <Footer/>
     </div>
   );
 };
