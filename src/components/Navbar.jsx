@@ -39,13 +39,14 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
           <Link to="/" className="text-gray-800 font-medium">Home</Link>
+          <Link to="/about" className="text-gray-800 font-medium">About</Link>
             <Link to="/salary-loan" className="text-gray-800 hover:text-black font-medium">Loans</Link>
             <Link to="/faq" className="text-gray-800 hover:text-black font-medium">FAQ</Link>
             
 
             <Link 
               to="/contact" 
-              className="bg-[#2B47FF] text-white px-4 py-2 rounded-md font-medium hover:bg-gray-800 transition-colors"
+              className="bg-[#2B47FF] hover:bg-black text-white px-4 py-2 rounded-md font-medium hover:bg-gray-800 transition-colors"
             >
               Contact us
             </Link>
@@ -70,6 +71,7 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-white absolute top-full left-0 w-full shadow-md py-4 px-4 flex flex-col space-y-4">
             <Link to="/" className="text-gray-800 font-medium">Home</Link>
+            <Link to="/about" className="text-gray-800 font-medium">About</Link>
             <Link to="/salary-loan" className="text-gray-800 font-medium">Loans</Link>
             <Link to="/faq" className="text-gray-800 font-medium">FAQ</Link>
         
