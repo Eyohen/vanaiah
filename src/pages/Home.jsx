@@ -269,8 +269,11 @@ import shield from '../assets/shield.png';
 import FAQ from '../components/FAQ';
 import footerlogo from '../assets/footerlogo.png';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+
+    const navigate = useNavigate();
   // For scroll reveal effect
   const [visibleSections, setVisibleSections] = useState({
     hero: false,
@@ -420,7 +423,7 @@ function Home() {
           </div>
 
           <div className={`flex justify-center mt-12 transform transition-all duration-1000 ease-out ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'} delay-500`}>
-            <button className="bg-[#FF6A2B] text-white text-xl px-9 rounded-md py-2 hover:bg-[#E05A22] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+            <button  onClick={() => navigate('/applynow')} className="bg-[#FF6A2B] text-white text-xl px-9 rounded-md py-2 hover:bg-[#E05A22] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
               Apply Now
             </button>
           </div>
@@ -499,7 +502,9 @@ function Home() {
               <p className="mt-6 text-xl text-gray-600">
                 Have questions about our loan options, repayment plans, or eligibility criteria? Our team is ready to assist you. Reach out to us, and we'll guide you through every step of the process.
               </p>
-              <button className="bg-black hover:bg-[#7487FF] text-white text-xl font-bold px-6 py-3 rounded-md mt-8 hover:bg-gray-800 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+              <button 
+              onClick={() => navigate('/contact')}
+              className="bg-black hover:bg-[#7487FF] text-white text-xl font-bold px-6 py-3 rounded-md mt-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                 Contact Us
               </button>
             </div>

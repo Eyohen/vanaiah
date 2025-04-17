@@ -1,99 +1,3 @@
-// import React from 'react'
-// import Navbar from '../components/Navbar'
-// import { useNavigate } from 'react-router-dom'
-// import footerlogo from '../assets/footerlogo.png'
-// import Footer from '../components/Footer';
-
-// const SalaryLoan = () => {
-//     const navigate = useNavigate()
-//   return (
-//     <div>
-//         <Navbar/>
-//         <div className='px-4 md:px-64 py-24'>
-
-// <div className='flex flex-col md:flex-row justify-center gap-y-4 md:gap-y-0 gap-x-48 py-16'>
-
-  
-
-// <div className="bg-[#000941] w-full max-w-3xl mx-auto rounded-2xl py-6 sm:py-9 px-4 sm:px-6">
-//   {/* Top Section - 1 Column on Mobile, 2 Column on larger screens */}
-//   <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-x-4 sm:gap-x-8 md:gap-x-12 gap-y-6 sm:gap-y-9">
-//     <div>
-//       <p className="text-base sm:text-lg text-white">Net Monthly Salary</p>
-//       <div className="bg-white px-2 py-2 rounded-lg mt-1 w-full">N 100,000</div>
-//     </div>
-
-//     <div>
-//       <p className="text-base sm:text-lg text-white">Advanced Amount Needed</p>
-//       <div className="bg-white px-2 py-2 rounded-lg mt-1 w-full">N 100,000</div>
-//     </div>
-
-//     <div className="sm:col-span-1">
-//       <p className="text-base sm:text-lg text-white">Repayment Period</p>
-//       <div className="bg-white px-2 py-2 rounded-lg mt-1 w-full">N 100,000</div>
-//     </div>
-//   </div>
-
-//   {/* Middle Section - Responsive Layout */}
-//   <div className="flex flex-col sm:flex-col md:flex-row sm:justify-between mt-6 sm:mt-9 gap-6 sm:gap-4">
-//     <div className="w-full sm:w-1/2 sm:pr-2">
-//       <p className="text-sm sm:text-base md:text-md text-white">Repayment Amount (Per Salary Deduction)</p>
-//       <div className="border border-white text-white px-2 py-2 rounded-lg mt-1 w-full">N 500,000</div>
-//     </div>
-
-//     <div className="w-full sm:w-1/2 sm:pl-2">
-//       <p className="text-base sm:text-lg text-white text-center sm:text-center">Interest/Fee (if Any)</p>
-//       <div className="border border-white text-white px-2 py-2 rounded-lg mt-1 w-full">N 500,000</div>
-//     </div>
-//   </div>
-
-//   {/* Bottom Section - Centered */}
-//   <div className="flex justify-center mt-6">
-//     <div className="w-full sm:w-2/3 md:w-1/2 lg:max-w-md">
-//       <p className="text-base sm:text-lg text-white text-center">Total Repayment</p>
-//       <div className="border border-white text-white px-2 py-2 rounded-lg mt-1 w-full">N 500,000</div>
-//     </div>
-//   </div>
-// </div>
-
-
-
-
-
-// <div>
-// <p className='font-bold text-4xl max-w-[400px]'>Salary Advance Loan Calculator</p>
-// <p className='text-xl max-w-[400px] mt-4'>Get access to a portion of your salary before payday to handle urgent expenses without stress.</p>
-// </div>
-
-
-// </div>
-
-
-// <div className='flex flex-col md:flex-row gap-y-4 md:gap-y-0 justify-center  gap-x-12'>
-//     <button onClick={() => navigate('/amortization-loan')} className='bg-[#2B47FF] text-white text-xl px-4 py-2 rounded-md'>Loan Amortization Calculator</button>
-
-//     <button onClick={() => navigate('/travel-loan')} className='px-4 py-2 rounded-md bg-gray-300 text-xl'>Travel loan Calculator</button>
-// </div>
-
-// <p className='text-center text-[#2B47FF] font-bold text-5xl mt-12'>Calculate your loan today and</p>
-
-// <p className='text-center text-[#2B47FF] font-bold text-5xl'>and in just a few clicks</p>
-
-//         </div>
-          
-//       {/* Footer */}
-//    <Footer/>
-//         </div>
-//   )
-// }
-
-// export default SalaryLoan
-
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
@@ -102,6 +6,37 @@ import Footer from '../components/Footer';
 
 const SalaryLoan = () => {
   const navigate = useNavigate();
+
+
+    // State variables for calculator
+    const [loanAmount, setLoanAmount] = useState(100000);
+    const [repaymentPeriod, setRepaymentPeriod] = useState(3);
+    
+    // Calculated values
+    const [interestAmount, setInterestAmount] = useState(30000);
+    const [totalRepayment, setTotalRepayment] = useState(130000);
+    const [monthlyRepayment, setMonthlyRepayment] = useState(43333.33);
+    
+    // Focused field for animation
+    const [focusedField, setFocusedField] = useState(null);
+    
+    // Calculate values whenever inputs change
+    useEffect(() => {
+      // Fixed 30% flat interest rate
+      const interestRate = 0.30;
+      
+      // Calculate interest amount
+      const interest = loanAmount * interestRate;
+      setInterestAmount(interest);
+      
+      // Calculate total repayment
+      const total = loanAmount + interest;
+      setTotalRepayment(total);
+      
+      // Calculate monthly repayment
+      const monthly = total / repaymentPeriod;
+      setMonthlyRepayment(monthly);
+    }, [loanAmount, repaymentPeriod]);
   
   // Track visible sections for animations
   const [visibleSections, setVisibleSections] = useState({
@@ -113,10 +48,10 @@ const SalaryLoan = () => {
   // For animation effects on input changes
   const [netSalary, setNetSalary] = useState(100000);
   const [advanceAmount, setAdvanceAmount] = useState(100000);
-  const [repaymentPeriod, setRepaymentPeriod] = useState(3);
+
   const [repaymentAmount, setRepaymentAmount] = useState(35000);
   const [interestFee, setInterestFee] = useState(5000);
-  const [totalRepayment, setTotalRepayment] = useState(105000);
+
 
   // Recalculate values when inputs change
   useEffect(() => {
@@ -160,92 +95,116 @@ const SalaryLoan = () => {
         <div id="calculator" className="flex flex-col md:flex-row justify-center items-center gap-y-8 md:gap-y-0 md:gap-x-24 lg:gap-x-32 py-16">
           
           {/* Calculator Interface */}
-          <div className={`w-full md:w-7/12 lg:w-1/2 transform transition-all duration-1000 ease-out ${visibleSections.calculator ? 'translate-x-0 opacity-100' : '-translate-x-16 opacity-0'}`}>
-            <div className="bg-gradient-to-br from-[#000941] to-[#0a1463] rounded-2xl py-8 px-6 shadow-xl hover:shadow-2xl transition-all duration-500">
-              {/* Top Section */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
-                <div className="transition-all duration-300 hover:scale-105">
-                  <p className="text-base sm:text-lg text-white mb-2">Net Monthly Salary</p>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600">N</span>
-                    <input 
-                      type="number" 
-                      value={netSalary}
-                      onChange={(e) => setNetSalary(Number(e.target.value))}
-                      className="bg-white px-8 py-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500 transition-all focus:outline-none"
-                    />
-                  </div>
-                </div>
+<div className={`w-full md:w-7/12 lg:w-1/2 transform transition-all duration-1000 ease-out ${visibleSections ? 'translate-x-0 opacity-100' : '-translate-x-16 opacity-0'}`}>
+      <div className="bg-gradient-to-br from-[#000941] to-[#0a1463] rounded-2xl py-8 px-6 shadow-xl hover:shadow-2xl transition-all duration-500">
+        <h2 className="text-white text-2xl font-bold text-center mb-6">
+          Salary Loan Calculator
+          <div className="w-16 h-1 bg-white mx-auto mt-2"></div>
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+          <div className="transition-all duration-300 hover:scale-105">
+            <p className="text-base sm:text-lg text-white mb-2">Loan Amount</p>
+            <div className="relative">
+              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600">₦</span>
+              <input 
+                type="number" 
+                value={loanAmount}
+                onChange={(e) => setLoanAmount(Number(e.target.value))}
+                onFocus={() => setFocusedField('amount')}
+                onBlur={() => setFocusedField(null)}
+                className={`bg-white px-8 py-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500 transition-all focus:outline-none ${
+                  focusedField === 'amount' ? 'ring-2 ring-blue-500' : ''
+                }`}
+              />
+            </div>
+            <p className="text-xs text-blue-200 mt-1">Enter the amount you want to borrow</p>
+          </div>
 
-                <div className="transition-all duration-300 hover:scale-105">
-                  <p className="text-base sm:text-lg text-white mb-2">Advanced Amount Needed</p>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600">N</span>
-                    <input 
-                      type="number" 
-                      value={advanceAmount}
-                      onChange={(e) => setAdvanceAmount(Number(e.target.value))}
-                      className="bg-white px-8 py-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500 transition-all focus:outline-none"
-                    />
-                  </div>
-                </div>
+          <div className="transition-all duration-300 hover:scale-105">
+            <p className="text-base sm:text-lg text-white mb-2">Repayment Period</p>
+            <select 
+              value={repaymentPeriod}
+              onChange={(e) => setRepaymentPeriod(Number(e.target.value))}
+              onFocus={() => setFocusedField('period')}
+              onBlur={() => setFocusedField(null)}
+              className={`bg-white px-4 py-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500 transition-all focus:outline-none ${
+                focusedField === 'period' ? 'ring-2 ring-blue-500' : ''
+              }`}
+            >
+              <option value={1}>1 Month</option>
+              <option value={2}>2 Months</option>
+              <option value={3}>3 Months</option>
+              <option value={6}>6 Months</option>
+              <option value={12}>12 Months</option>
+            </select>
+            <p className="text-xs text-blue-200 mt-1">Select your preferred repayment period</p>
+          </div>
+          
+          <div className="md:col-span-2 py-2 px-4 bg-blue-900/30 rounded-lg mt-2 mb-4">
+            <p className="text-white text-center text-sm">Fixed Interest Rate: <span className="font-bold">30%</span> (Flat)</p>
+          </div>
+        </div>
 
-                <div className="transition-all duration-300 hover:scale-105">
-                  <p className="text-base sm:text-lg text-white mb-2">Repayment Period (Months)</p>
-                  <select 
-                    value={repaymentPeriod}
-                    onChange={(e) => setRepaymentPeriod(Number(e.target.value))}
-                    className="bg-white px-4 py-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500 transition-all focus:outline-none"
-                  >
-                    <option value={1}>1 Month</option>
-                    <option value={2}>2 Months</option>
-                    <option value={3}>3 Months</option>
-                    <option value={6}>6 Months</option>
-                    <option value={12}>12 Months</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Middle Section - Results */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                <div className="transition-all duration-300 hover:scale-105">
-                  <p className="text-base sm:text-lg text-white mb-2">Monthly Repayment</p>
-                  <div className="border border-white bg-white/5 backdrop-blur-sm text-white px-4 py-3 rounded-lg flex items-center justify-between transition-all duration-300 hover:bg-white/10">
-                    <span>N</span>
-                    <span className="text-xl font-semibold">{repaymentAmount.toLocaleString(undefined, {maximumFractionDigits: 2})}</span>
-                  </div>
-                </div>
-
-                <div className="transition-all duration-300 hover:scale-105">
-                  <p className="text-base sm:text-lg text-white mb-2 text-center md:text-left">Interest/Fee</p>
-                  <div className="border border-white bg-white/5 backdrop-blur-sm text-white px-4 py-3 rounded-lg flex items-center justify-between transition-all duration-300 hover:bg-white/10">
-                    <span>N</span>
-                    <span className="text-xl font-semibold">{interestFee.toLocaleString(undefined, {maximumFractionDigits: 2})}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom Section - Total */}
-              <div className="flex justify-center mt-8">
-                <div className="w-full max-w-sm transition-all duration-300 hover:scale-105">
-                  <p className="text-lg text-white mb-2 text-center font-medium">Total Repayment</p>
-                  <div className="border-2 border-white bg-white/5 backdrop-blur-sm text-white px-4 py-3 rounded-lg flex items-center justify-between transition-all duration-300 hover:bg-white/10">
-                    <span>N</span>
-                    <span className="text-2xl font-bold">{totalRepayment.toLocaleString(undefined, {maximumFractionDigits: 2})}</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Apply Now Button */}
-              <div className="flex justify-center mt-8">
-                <button 
-                  className="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-lg font-semibold px-8 py-3 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                >
-                  Apply Now
-                </button>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <div className="transition-all duration-300 hover:scale-105">
+            <p className="text-base sm:text-lg text-white mb-2">Monthly Repayment</p>
+            <div className="border border-white bg-white/5 backdrop-blur-sm text-white px-4 py-3 rounded-lg flex items-center justify-between transition-all duration-300 hover:bg-white/10">
+              <span>₦</span>
+              <span className="text-xl font-semibold">{monthlyRepayment.toLocaleString(undefined, {maximumFractionDigits: 2})}</span>
             </div>
           </div>
+
+          <div className="transition-all duration-300 hover:scale-105">
+            <p className="text-base sm:text-lg text-white mb-2">Interest Amount</p>
+            <div className="border border-white bg-white/5 backdrop-blur-sm text-white px-4 py-3 rounded-lg flex items-center justify-between transition-all duration-300 hover:bg-white/10">
+              <span>₦</span>
+              <span className="text-xl font-semibold">{interestAmount.toLocaleString(undefined, {maximumFractionDigits: 2})}</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <div className="w-full max-w-sm transition-all duration-300 hover:scale-105">
+            <p className="text-lg text-white mb-2 text-center font-medium">Total Repayment</p>
+            <div className="border-2 border-white bg-white/5 backdrop-blur-sm text-white px-4 py-3 rounded-lg flex items-center justify-between transition-all duration-300 hover:bg-white/10">
+              <span>₦</span>
+              <span className="text-2xl font-bold">{totalRepayment.toLocaleString(undefined, {maximumFractionDigits: 2})}</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="flex justify-center mt-8">
+          <button 
+            className="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-lg font-semibold px-8 py-3 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex items-center"
+          >
+            Apply Now
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Information tooltip */}
+        <div className="mt-8 p-3 bg-blue-900/30 rounded-lg">
+          <div className="flex items-start">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-blue-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div className="ml-3">
+              <p className="text-sm text-blue-200">
+                This calculator uses a <span className="font-semibold">30% flat interest rate</span>. Interest is calculated once on the initial loan amount.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
           {/* Descriptive Text */}
           <div className={`w-full md:w-5/12 lg:w-1/3 transform transition-all duration-1000 ease-out ${visibleSections.calculator ? 'translate-x-0 opacity-100' : 'translate-x-16 opacity-0'}`}>
