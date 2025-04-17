@@ -211,7 +211,7 @@ const ApplyNow = () => {
       <Navbar />
 
       {/* Header Carousel */}
-      <section className="pt-32 pb-16 px-4 md:px-0 h-[400px] relative overflow-hidden">
+      <section className="pt-32 pb-16 px-4 md:px-0 h-[500px] relative overflow-hidden">
         {/* Slides container */}
         <div className="absolute inset-0 w-full h-full">
           {slides.map((slide, index) => (
