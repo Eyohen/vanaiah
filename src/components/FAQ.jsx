@@ -14,26 +14,56 @@ const FAQ = () => {
     },
     {
       id: 2,
-      question: "What documents do I need to provide?",
-      answer: "Yes! You can start with our free plan, which offers core features to help you manage your inventory for 14 days only.",
+      question: "How do I apply for a loan?",
+      answer: "You can apply for a loan by visiting our website or contacting our customer service team. The application process is quick and straightforward, requiring basic personal and financial information.",
       isOpen: false
     },
     {
       id: 3,
-      question: "How long does it take to receive my funds?",
-      answer: "After our 14 days free plan, you will be required to pay our subscription fee (monthly) which enables you enjoy our premium features for advanced analytics and collaborative features.",
+      question: "What documents do I need to provide?",
+      answer: "Typically, you'll need to provide identification (such as a government-issued ID), proof of income (like payslips or bank statements), and any additional documents specific to the type of loan you're applying for.",
       isOpen: false
     },
     {
       id: 4,
-      question: "Are there any hidden fees?",
-      answer: "We take data security seriously. Your information is encrypted, and we adhere to industry-standard practices to ensure your data remains private and protected.",
+      question: "How long does it take to receive my funds?",
+      answer: "Once your application is approved, funds are typically disbursed within 24 to 48 hours, depending on the loan type and your financial institution.",
       isOpen: false
     },
     {
       id: 5,
       question: "Are there any hidden fees?",
-      answer: "Definitely! The system is designed with small businesses in mind. It’s affordable, user-friendly, and helps save time by automating repetitive tasks.",
+      answer: "No, we believe in transparency. All fees and charges will be clearly outlined in your loan agreement, and there are no hidden costs.",
+      isOpen: false
+    },
+    {
+      id: 6,
+      question: "Can I repay my loan early?",
+      answer: "Yes, you can repay your loan early without incurring any penalties. We encourage responsible financial management and appreciate early repayments.",
+      isOpen: false
+    },
+    {
+      id: 7,
+      question: "What if I have trouble making my payments?",
+      answer: "If you’re facing difficulties, please contact our customer service team as soon as possible. We’re here to help and can discuss options that may be available to assist you.",
+      isOpen: false
+    },
+    {
+      id: 8,
+      question: "Is my personal information safe with VANAIAH?",
+      answer: "Absolutely. We take your privacy seriously and employ strict security measures to protect your personal and financial information.",
+      isOpen: false
+    },
+    {
+      id: 9,
+      question: "Do you provide financial advisory services?",
+      answer: "Yes, we offer financial advisory services to help you make informed decisions and optimize your financial planning. Our experts are here to guide you.",
+      isOpen: false
+    },
+    {
+      id: 10,
+      question: "Who can apply for a loan with VANAIAH?",
+      answer: "Our services are available to both individuals and SMEs based in Lagos State. Applicants must meet specific eligibility criteria, which will be outlined during the application process.",
       isOpen: false
     },
 
