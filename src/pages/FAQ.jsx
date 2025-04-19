@@ -4,6 +4,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Navbar from "../components/Navbar";
 import unanswered from '../assets/unanswered.png'
 import Footer from '../components/Footer';
+import { Link } from "react-router-dom";
 
 
 const FAQ = () => {
@@ -80,6 +81,7 @@ const FAQ = () => {
   };
 
   return (
+    <>
     <div className="bg-white px-4 sm:px-6 lg:px-8 xl:px-[300px] py-12 max-w-[1920px] mx-auto">
         <Navbar/>
       <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-center pt-16">
@@ -135,9 +137,11 @@ const FAQ = () => {
 <p className="font-bold text-center text-4xl mt-12">Have unanswered questions?</p>
 <div className="flex justify-center mt-12"><img src={unanswered}/></div>
 
+<Link to={'/contact'}><div className="flex justify-center mt-9"><button className="bg-black py-3 px-6 rounded-lg text-white">Contact Us</button></div></Link>
 
-<Footer/>
     </div>
+    <Footer/>
+    </>
   );
 };
 
