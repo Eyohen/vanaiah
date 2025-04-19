@@ -123,8 +123,10 @@ import slide1 from '../assets/slide1.png';
 import slide2 from '../assets/slide2.png';
 import slide3 from '../assets/slide3.png';
 import Footer from '../components/Footer';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ApplyNow = () => {
+    const navigate = useNavigate();
   // State to track current slide
   const [currentSlide, setCurrentSlide] = useState(0);
   
@@ -322,6 +324,7 @@ const ApplyNow = () => {
               onMouseEnter={() => setActiveButton(button.id)}
               onMouseLeave={() => setActiveButton(null)}
             >
+              <Link to={'http://form.vanaiah.com/'} >
               <button 
                 className={`w-full bg-gradient-to-r ${button.color} rounded-xl py-6 px-4 text-white shadow-lg 
                   transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
@@ -337,6 +340,7 @@ const ApplyNow = () => {
                   <p className="text-sm text-white text-opacity-90">{button.description}</p>
                 </div>
               </button>
+              </Link>
             </div>
           ))}
         </div>

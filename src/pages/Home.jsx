@@ -397,25 +397,25 @@ function Home() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className={`font-bold text-4xl bg-[#7487FF] px-4 py-6 shadow-2xl rounded-lg hover:-translate-y-3 hover:shadow-xl transition-all duration-500 transform ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'} transition-all duration-700 delay-100`}>
+            <div className={`font-bold text-4xl hover:bg-[#7487FF] hover:text-white px-4 py-6 shadow-2xl rounded-lg hover:-translate-y-3 hover:shadow-xl transition-all duration-500 transform ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'} transition-all duration-700 delay-100`}>
               <img src={kite} alt="Travel Loans" className="transition-transform duration-500 hover:scale-110" />
-              <p className="py-4 text-white text-2xl">Travel Loans</p>
-              <p className="text-white text-2xl font-light py-9">Fund your relocation or proof of funds needs without any stress.</p>
+              <p className="py-4 text-2xl">Travel Loans</p>
+              <p className="text-2xl font-light py-9">Fund your relocation or proof of funds needs without any stress.</p>
             </div>
 
-            <div className={`font-bold text-4xl border-4 hover:border-[#7487FF] px-4 py-6 shadow-2xl rounded-lg hover:-translate-y-3 hover:shadow-xl transition-all duration-500 transform ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'} transition-all duration-700 delay-200`}>
+            <div className={`font-bold text-4xl hover:bg-[#7487FF] hover:text-white px-4 py-6 shadow-2xl rounded-lg hover:-translate-y-3 hover:shadow-xl transition-all duration-500 transform ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'} transition-all duration-700 delay-200`}>
               <img src={coins} alt="Personal Financial Loans" className="transition-transform duration-500 hover:scale-110" />
               <p className="py-4 text-2xl">Personal Financial Loans</p>
               <p className="text-2xl font-light py-9">Cover unexpected expenses or make a big purchase with ease.</p>
             </div>
 
-            <div className={`font-bold text-4xl border-4 hover:border-[#7487FF] px-4 py-6 shadow-2xl rounded-lg hover:-translate-y-3 hover:shadow-xl transition-all duration-500 transform ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'} transition-all duration-700 delay-300`}>
+            <div className={`font-bold text-4xl hover:bg-[#7487FF] hover:text-white px-4 py-6 shadow-2xl rounded-lg hover:-translate-y-3 hover:shadow-xl transition-all duration-500 transform ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'} transition-all duration-700 delay-300`}>
               <img src={crown} alt="Financial Advisory" className="transition-transform duration-500 hover:scale-110" />
               <p className="py-4 text-2xl">Financial Advisory</p>
               <p className="text-2xl font-light py-9">Get expert guidance to optimize your finances</p>
             </div>
 
-            <div className={`font-bold text-4xl border-4 hover:border-[#7487FF] px-4 py-6 shadow-2xl rounded-lg hover:-translate-y-3 hover:shadow-xl transition-all duration-500 transform ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'} transition-all duration-700 delay-400`}>
+            <div className={`font-bold text-4xl hover:bg-[#7487FF] hover:text-white px-4 py-6 shadow-2xl rounded-lg hover:-translate-y-3 hover:shadow-xl transition-all duration-500 transform ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'} transition-all duration-700 delay-400`}>
               <img src={dollar} alt="Salary Advance Loans" className="transition-transform duration-500 hover:scale-110" />
               <p className="py-4 text-2xl">Salary Advance Loans</p>
               <p className="text-2xl font-light py-9">Access your earnings before payday to stay financially secure.</p>
