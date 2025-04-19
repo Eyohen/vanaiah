@@ -44,9 +44,22 @@ const Footer = () => {
           <li><a href="#" className="text-white transition-colors">Monday - Friday</a></li>
           <li><a href="#" className="text-white transition-colors">8am - 5pm</a></li>
           <li><a href="#" className="text-white transition-colors">Help Centre</a></li>
-          <li><a href="#" className="text-white transition-colors">+234 7066391271</a></li>
+          <li><a href="#" className="text-white transition-colors">+234 8038938564</a></li>
           <li><a href="#" className="text-white transition-colors">Email</a></li>
           <li><a href="#" className="text-white transition-colors">support@vanaiah.com</a></li>
+
+        </ul>
+      </div>
+
+
+
+      <div>
+        <h4 className="font-bold text-white text-2xl mb-4">Location</h4>
+        <ul className="space-y-3">
+          <li><a href="#" className="text-white transition-colors">55e Adebisi </a></li>
+          <li><a href="#" className="text-white transition-colors">Omotola</a></li>
+          <li><a href="#" className="text-white transition-colors">Close, Victoria</a></li>
+          <li><a href="#" className="text-white transition-colors">Island, Lagos State</a></li>
 
         </ul>
       </div>

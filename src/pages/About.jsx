@@ -274,7 +274,7 @@ const About = () => {
               Our Vision
             </p>
             <p className="w-full md:w-[420px] text-xl mt-2 text-gray-700">
-              VANAIAH is a licensed micro-lending company in Lagos, dedicated to providing financial solutions tailored to individuals and SMEs. We believe in integrity, transparency, and exceptional service, ensuring you get the support you need when you need it.
+            To be the leading provider of innovative and transparent financial solutions, empowering individuals and businesses with access to value-driven services that promote financial inclusion and sustainable growth.
             </p>
           </div>
         </div>

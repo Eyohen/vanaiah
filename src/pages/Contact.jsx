@@ -311,10 +311,10 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-[#2B47FF] mb-2">Call Us</h3>
               <p className="text-gray-600 mb-4">Available Mon-Fri, 8AM-6PM PT</p>
               <a 
-                href="tel:+2347066391271" 
+                href="tel:+2348038938564" 
                 className="text-black font-medium hover:text-[#2B47FF] transition-colors duration-300 inline-flex items-center"
               >
-                +2347066391271
+                +234 8038938564
                 <span className="ml-2 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
             </div>

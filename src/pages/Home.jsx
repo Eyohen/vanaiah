@@ -423,6 +423,7 @@ function Home() {
           </div>
 
           <div className={`flex justify-center mt-12 transform transition-all duration-1000 ease-out ${visibleSections.services ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'} delay-500`}>
+            
             <button  onClick={() => navigate('/applynow')} className="bg-[#FF6A2B] text-white text-xl px-9 rounded-md py-2 hover:bg-[#E05A22] hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
               Apply Now
             </button>
