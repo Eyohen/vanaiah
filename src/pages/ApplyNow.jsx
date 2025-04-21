@@ -324,7 +324,7 @@ const ApplyNow = () => {
               onMouseEnter={() => setActiveButton(button.id)}
               onMouseLeave={() => setActiveButton(null)}
             >
-              <Link to={'http://form.vanaiah.com/'} >
+              <Link to={'https://form.vanaiah.com/'} >
               <button 
                 className={`w-full bg-gradient-to-r ${button.color} rounded-xl py-6 px-4 text-white shadow-lg 
                   transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
